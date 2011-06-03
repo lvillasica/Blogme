@@ -14,10 +14,11 @@
   <b>Comment Date:</b>
   <%= @comment.comment_date%>
 </p>
+
+<% if author_signed_in? and @comment.email == current_author.email %>
+  <%= link_to 'Edit', edit_article_comment_path(@article, @comment) %> |
+<% end %>
 <% if current_author == @article.author %>
-  <% if @comment.email == @article.author.email %>
-    <%= link_to 'Edit', edit_article_comment_path(@article, @comment) %> |
-  <% end %>
   <%= link_to 'Delete', article_comment_path(@article, @comment), :method => :delete, :confirm => "Are you sure?" %> |
 <% end %>
 <%= link_to 'Back', article_path(@article) %>

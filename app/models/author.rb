@@ -14,7 +14,7 @@
 
 class Author < ActiveRecord::Base
 
-  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "50x50>" }
+  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "50x50>" }, :default_url => "./no-image.jpeg"
   #default_scope order('last_name, first_name')
   sort_record_by 'last_name, first_name'
   #attr_accessor :photo_file_name

@@ -65,5 +65,33 @@ a:hover{
   padding-top: 20px;
 }
 ul li{
-  padding-top: 5px;
+  padding-bottom: 15px;
+  list-style-type: none;
+}
+ul li.comment_list{
+  -moz-border-radius: 10px;
+  -moz-box-shadow:inset 0px 0px 20px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  background-color: #707070;
+}
+ul {
+  margin-right: 40px;
+}
+img {
+  border: 3px solid;
+  -moz-border-radius: 5px;
+}
+#notice{
+  color: red;
+  font-style: italic;
+}
+ul li.lists:hover{
+  -moz-border-radius: 10px;
+  -moz-box-shadow:inset 0px 0px 20px;
+  background-color: #707070;
+  padding: 10px;
+  margin-bottom: 10px;
 }

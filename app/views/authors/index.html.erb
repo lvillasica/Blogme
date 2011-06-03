@@ -2,8 +2,8 @@
 <hr />
 <ul>
 <% @authors.each do |author| %>
-  <li>
-    <%= image_tag author.photo.url(:thumb) %>  
+  <li class="lists">
+    <%= image_tag author.photo.url(:thumb), :size => "50x50" %>  
     <%= link_to author.full_name, author %>
   </li>
 <% end %>

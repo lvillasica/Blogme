@@ -1,13 +1,12 @@
 <hr />
 <h1>Comments</h1>
 <hr />
-<ul>
+<ul id="comments_ul">
 <% comments.each do |comment| %>
-  <li>
-    <% comment %>
+  <li class="comment_list">
     <%= link_to comment.email, article_comment_path(@article, comment), :id => "comment-#{comment.id}" %>
     <ul>
-      <li><%= comment.body.truncate(10)%></li>
+      <li><%= comment.body %></li>
     </ul>
   </li>
 <% end %>
@@ -15,8 +14,7 @@
  
 <br />
 
-<%= link_to 'New Comment', new_article_comment_path(@article) %> |
-<%= link_to "Back to '#{@article.title}'", @article  %>
-<div id="new_comment_container">
+<%= link_to 'Add Comment', new_article_comment_path(@article) %> |
+<%= link_to "Hide Comments", "#", :id => "hide" %>
 
-</div>
+

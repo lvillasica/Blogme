@@ -2,7 +2,7 @@
 <hr />
 <ul>
 <% @articles.each do |article| %>
-  <li>
+  <li title="<%= article.author.full_name %>" class="lists">
     <%= link_to article.title, article %>
     <ul>
       <li><%= article.body.truncate(10)%></li>
