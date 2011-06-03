@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @comment.email%>
+</p>
+
+<p>
+  <b>Comment:</b><br />
+  <%= @comment.body%>
+</p>
+
+<p>
+  <b>Comment Date:</b>
+  <%= @comment.comment_date%>
+</p>
+<% if current_author == @article.author %>
+  <% if @comment.email == @article.author.email %>
+    <%= link_to 'Edit', edit_article_comment_path(@article, @comment) %> |
+  <% end %>
+  <%= link_to 'Delete', article_comment_path(@article, @comment), :method => :delete, :confirm => "Are you sure?" %> |
+<% end %>
+<%= link_to 'Back', article_path(@article) %>

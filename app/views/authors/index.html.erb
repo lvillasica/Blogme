@@ -1,0 +1,16 @@
+<h1>Authors</h1>
+<hr />
+<ul>
+<% @authors.each do |author| %>
+  <li>
+    <%= image_tag author.photo.url(:thumb) %>  
+    <%= link_to author.full_name, author %>
+  </li>
+<% end %>
+</ul>
+<%= will_paginate @authors %>
+
+<% if !author_signed_in? %>
+<br />
+<%= link_to 'New Author', new_author_registration_path %>
+<% end %>

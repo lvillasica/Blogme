@@ -1,0 +1,7 @@
+<h1>New Comment</h1>
+<hr />
+<% form_for @comment, :url => article_comments_path(@article) do |f| %>
+<%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+<hr />
+<%= link_to 'Back', article_path(@article) %>
