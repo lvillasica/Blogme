@@ -6,7 +6,7 @@
   <li class="comment_list">
     <%= link_to comment.email, article_comment_path(@article, comment), :id => "comment-#{comment.id}" %>
     <ul>
-      <li><%= comment.body %></li>
+      <li><p class="comments"><%= comment.body %></p></li>
     </ul>
   </li>
 <% end %>

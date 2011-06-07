@@ -4,13 +4,13 @@
   <%= @article.title %>
 </h1>
 
-<p id = "article_body">
+<p id="article_body">
   <%= @article.body%>
 </p>
 
 <p>
 <%= @article.status %> by:
-  <%= image_tag @article.author.photo.url(:thumb), :size => "30x30" %> 
+  <%= link_to (image_tag @article.author.photo.url(:thumb), :size => "30x30"), author_path(@article.author), :id => "imglnk" %> 
   <%= @article.author.full_name %>
 </p>
 

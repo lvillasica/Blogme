@@ -1,16 +1,21 @@
 body{
   font-family: Sans-serif;
   margin: 0;
-  background-color: #101010 ;
+  background-color: #1C1C1C;
+  background-image:url('../images/mainpanelbg.jpeg');
 }
 #main{
   width: 981px;
   margin: auto;
-  border: 3px solid #707070 ;
+  border: 3px solid #000;
+  border-top: none;
   padding: 5px;
-  background-color: #B8B8B8;
+  background-color: #fff;
+  background-image:url('../images/contentbg2.jpeg');
   -moz-border-radius-bottomright: 20px;
   -moz-border-radius-bottomleft: 20px;
+  opacity:0.9;
+  filter:alpha(opacity=90);
 }
 h1{
   text-shadow: 1px 1px 0px #bad3ed;
@@ -19,7 +24,7 @@ h1{
   margin: auto;
   width: 30%;
   padding: 10px;
-  border: 1px solid #fff;
+  border: 2px solid #000;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   -khtml-border-radius: 20px;
@@ -39,7 +44,10 @@ h1{
   -webkit-border-radius: 20px;
   -khtml-border-radius: 20px;
   border-radius: 20px;
-  background-color: #707070;
+  background-color: #000;
+}
+div#main_lnks a{
+  text-decoration: none;
 }
 a:hover{
   background-color: grey;
@@ -59,6 +67,11 @@ a:hover{
   background-color: #f0f0f2;
   -moz-border-radius: 20px;
   border: 1px solid;
+}
+p.comments{
+  overflow:auto;
+  text-align: justify;
+  padding: 0px 15px 0px;
 }
 .field {
   padding-left: 30px;
@@ -94,4 +107,27 @@ ul li.lists:hover{
   background-color: #707070;
   padding: 10px;
   margin-bottom: 10px;
+}
+#imagePanel, #authorInfo{
+  float: left;
+  padding: 0 20px 20px 20px;
+}
+#authorInfo{
+  border: 2px solid #333;
+  background-color: #f0f0f2;
+  -moz-border-radius: 10px;
+  width: 50%;
+}
+.clear{
+  clear: both;
+}
+#wrapper{
+  margin: 0 20px;
+}
+#imglnk:hover{
+  background: none;
+  padding: none;
+  border: none;
+  text-decoration: none;
+  color: none;
 }

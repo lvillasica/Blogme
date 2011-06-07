@@ -5,8 +5,8 @@
   <%= @comment.email%>
 </p>
 
-<p>
-  <b>Comment:</b><br />
+<b>Comment:</b>
+<p class="comments">
   <%= @comment.body%>
 </p>
 
@@ -22,3 +22,4 @@
   <%= link_to 'Delete', article_comment_path(@article, @comment), :method => :delete, :confirm => "Are you sure?" %> |
 <% end %>
 <%= link_to 'Back', article_path(@article) %>
+

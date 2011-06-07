@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div id="wrapper">
+<div id="imagePanel">
 <%= image_tag @author.photo.url(:medium) %>
-
+</div>
+<div id="authorInfo">
 <p>
-  <%= @author.full_name %>
+  <b><%= @author.full_name %></b>
 </p>
 
 <p>
@@ -16,7 +19,7 @@
 </p>
 
 <p>
-  <%= "Articles:" if @author.articles.size > 0 %>
+  <b><%= "Articles:" if @author.articles.size > 0 %></b>
   <ul>
   <% @author.articles.each do |article|%>
      <li title="<%= article.body.truncate(30) %>"><%= link_to article.title, article_path(article) %></li>
@@ -24,8 +27,9 @@
   
   </ul>
 </p>
-
-
+</div>
+</div>
+<div class="clear"></div>
 <% if current_author == @author %>
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Delete', author_path(@author), :method => :delete, :confirm => "Are you sure?" %> |

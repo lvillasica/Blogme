@@ -7,14 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<% page = request.path_parameters[:controller] %>
 <div id="main">
 <%= yield %>
 <br />
 <br />
 </div>
 <div id="main_lnks">
-<%= link_to "Articles", articles_path %> |
-<%= link_to "Authors", authors_path %> 
+<%= link_to "Articles", articles_path unless page == "articles" %>
+<%= link_to "Authors", authors_path unless page == "authors" %> 
 <% if author_signed_in? %>
 <hr /><%= link_to "Sign-out", destroy_author_session_path %>
 <% else %>
