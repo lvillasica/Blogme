@@ -18,7 +18,7 @@
   <%= @article.date_posted %>
 </p>
 
-<%= link_to "Comments (#{@article.comments.size})", article_path(@article), :remote => true %> |
+<%= link_to "Comments (#{@article.comments.size})", article_path(@article), :remote => true, :id => "commlistlnk" %> |
 <% if current_author == @article.author %>
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Delete', article_path(@article), :method => :delete, :confirm => "Are you sure?" %> |

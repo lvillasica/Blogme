@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.paginate :page => params[:page], :order => 'updated_at ASC'
+    @articles = Article.paginate :page => params[:page], :order => 'updated_at DESC'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  #{ render :xml => @articles }

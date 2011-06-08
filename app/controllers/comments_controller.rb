@@ -24,6 +24,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     respond_to do |format|
       format.html # new.html.erb
+      format.js
       format.xml  { render :xml => @comments }
     end
   end
@@ -38,6 +39,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to(article_comment_path(@comment.article_id, @comment), :notice => 'comment was successfully created.') }
+        format.js
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
         format.html { render :action => "new" }
@@ -64,7 +66,7 @@ class CommentsController < ApplicationController
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(article_comments_path(@article)) }
+      format.html { redirect_to(article_path(@article)) }
       format.xml  { head :ok }
     end
   end

@@ -4,6 +4,10 @@
 <ul id="comments_ul">
 <% comments.each do |comment| %>
   <li class="comment_list">
+    <% authors = Author.all %>
+    <% authors.each do |author| %> 
+      <%= image_tag author.photo.url(:thumb), :size => "30x30" if author.email == comment.email %>
+    <% end %>
     <%= link_to comment.email, article_comment_path(@article, comment), :id => "comment-#{comment.id}" %>
     <ul>
       <li><p class="comments"><%= comment.body %></p></li>
@@ -14,7 +18,11 @@
  
 <br />
 
-<%= link_to 'Add Comment', new_article_comment_path(@article) %> |
+<%= link_to 'Add Comment', new_article_comment_path(@article), :id => "addCommentlnk", :remote => true %> |
 <%= link_to "Hide Comments", "#", :id => "hide" %>
+
+<div id="addComment">
+
+</div>
 
 

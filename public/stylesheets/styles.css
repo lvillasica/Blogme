@@ -3,6 +3,7 @@ body{
   margin: 0;
   background-color: #1C1C1C;
   background-image:url('../images/mainpanelbg.jpeg');
+  background-attachment:fixed;
 }
 #main{
   width: 981px;
@@ -88,7 +89,7 @@ ul li.comment_list{
   padding: 10px;
   margin-bottom: 10px;
   list-style-type: none;
-  background-color: #707070;
+  background-color: #BDA674;
 }
 ul {
   margin-right: 40px;
@@ -104,7 +105,7 @@ img {
 ul li.lists:hover{
   -moz-border-radius: 10px;
   -moz-box-shadow:inset 0px 0px 20px;
-  background-color: #707070;
+  background-color: #BDA674;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -130,4 +131,25 @@ ul li.lists:hover{
   border: none;
   text-decoration: none;
   color: none;
+}
+.required{
+  color: red;
+  font-weight: bold;
+}
+input[type="submit"]{
+  background-color: #ED9C10;
+  color: white;
+  padding: 3px;
+  font-weight: bold;
+  -moz-border-radius: 10px;
+  -moz-box-shadow: 0 5px 5px #55410A;
+}
+input[type="submit"]:hover{
+  background-color: #FDC21E;
+  color: black;
+}
+input[type="submit"]:active{
+  background-color: #ED9C10;
+  color: white;
+  -moz-box-shadow: 0 2px 2px #55410A;
 }

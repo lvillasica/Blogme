@@ -6,6 +6,8 @@ $(document).ready(function() {
   $("#hide").live('click', function() {
     $("#comments_content").slideUp(1000);
   });
+  $("#hideForm").live('click', function() {
+    $("#addComment").slideUp(1000);
+  });
 });
-
 

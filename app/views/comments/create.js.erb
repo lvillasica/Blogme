@@ -1,0 +1,4 @@
+$("#comments_ul li.comment_list:last").hide();
+$("#comments_content").html("<%= escape_javascript(render :partial => 'comments/index', :locals => {:comments => @article.comments})%>").show('slow');
+$("#comments_ul li.comment_list:last").hide().fadeIn(1000);
+$("#commlistlnk").html("Comments (<%= @article.comments.size %>)");

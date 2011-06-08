@@ -17,7 +17,7 @@ class Article < ActiveRecord::Base
   
   cattr_reader :per_page
     @@per_page = 5
-  sort_record_by 'title'
+  sort_record_by 'date_posted'
   validates_presence_of :title
   validates_presence_of :body
   validates_inclusion_of :status, :in => %w( Draft Posted )
