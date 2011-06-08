@@ -22,7 +22,9 @@
   <b><%= "Articles:" if @author.articles.size > 0 %></b>
   <ul>
   <% @author.articles.each do |article|%>
+     <% if article.status == "Posted" or article.author == current_author %>
      <li title="<%= article.body.truncate(30) %>"><%= link_to article.title, article_path(article) %></li>
+     <% end %>
   <%end%>
   
   </ul>
