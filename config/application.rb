@@ -38,5 +38,11 @@ module RailsExercise
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.middleware.use ExceptionNotifier,
+      :email_prefix => "[ERROR] ",
+      :sender_address => '"Notifier" <fxdgreat@gmail.com>',
+      :exception_recipients => ['fxdgreat@gmail.com']
+    end
   end
 end
