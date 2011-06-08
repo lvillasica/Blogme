@@ -43,6 +43,5 @@ module RailsExercise
       :email_prefix => "[ERROR] ",
       :sender_address => '"Notifier" <fxdgreat@gmail.com>',
       :exception_recipients => ['fxdgreat@gmail.com']
-    end
   end
 end
