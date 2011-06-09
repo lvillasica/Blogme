@@ -23,7 +23,9 @@
   <ul>
   <% @author.articles.each do |article|%>
      <% if article.status == "Posted" or article.author == current_author %>
-     <li title="<%= article.body.truncate(30) %>">&raquo; <%= link_to article.title, article_path(article) %></li>
+     <li title="<%= article.body.truncate(30) %>">&raquo; <%= link_to article.title, article_path(article) %>
+        <span class="draft"><%= "(Draft)" unless article.status == "Posted" %></span>
+     </li>
      <% end %>
   <%end%>
   
@@ -36,4 +38,4 @@
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Delete', author_path(@author), :method => :delete, :confirm => "Are you sure?" %> |
 <% end %>
-<%= link_to 'Back', authors_path %>
+<%= link_to 'Back to Authors', authors_path %>

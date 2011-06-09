@@ -4,7 +4,8 @@
 <% @articles.each do |article| %>
   <% if article.status == "Posted" or article.author == current_author %>
   <li title="<%= article.author.full_name %>" class="lists">
-    &raquo; <%= link_to article.title, article %>
+    &raquo; <%= link_to article.title, article %> 
+    <span class="draft"><%= "(Draft)" unless article.status == "Posted" %></span>
     <ul>
       <li><%= article.body.truncate(10)%></li>
     </ul>

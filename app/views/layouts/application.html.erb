@@ -9,22 +9,40 @@
 </head>
 <body>
 <div id="header">
-  <div id="title">The Wall</div>
+  <div id="title">
+    The Wall
+    <!--
+    <span id="searchbox">
+      <form action="<%= articles_path %>">
+        <input type="text" value="Search" />
+      </form>
+    </span>
+    -->
+  </div>
 </div>
-<% page = request.path_parameters[:controller] %>
-<div id="main">
-<%= yield %>
-<br />
-<br />
-</div>
-<div id="main_lnks">
-<%= link_to "Articles", articles_path unless page == "articles" %>
-<%= link_to "Authors", authors_path unless page == "authors" %> 
-<% if author_signed_in? %>
-<hr /><%= link_to "Sign-out", destroy_author_session_path %>
-<% else %>
-<hr /><%= link_to "Sign-in", new_author_session_path %>
-<% end %>
+<div id="wrapper">
+  <% if author_signed_in? %>
+  <div id="user_photo">
+    <%= link_to (image_tag current_author.photo.url(:medium), :size => "150x150"), author_path(current_author), :id => "user_photo_lnk" %>
+  </div>
+  <% end %>
+  <% page = request.path_parameters[:controller] %>
+  <div id="contentwrapper">
+    <div id="main">
+    <%= yield %>
+    <br />
+    <br />
+    </div>
+    <div id="main_lnks">
+    <%= link_to "Articles", articles_path unless page == "articles" %>
+    <%= link_to "Authors", authors_path unless page == "authors" %> 
+    <% if author_signed_in? %>
+    <hr /><%= link_to "Sign-out", destroy_author_session_path %>
+    <% else %>
+    <hr /><%= link_to "Sign-in", new_author_session_path %>
+    <% end %>
+    </div>
+  </div>
 </div>
 </body>
 </html>

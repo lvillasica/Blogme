@@ -5,7 +5,7 @@
   <li class="lists">
     <%= image_tag author.photo.url(:thumb), :size => "50x50" %>  
     <%= link_to author.full_name, author %>
-    <%= "(You!)" if current_author == author %>
+    <span class="you"><%= "(You!)" if current_author == author %></span>
   </li>
 <% end %>
 </ul>

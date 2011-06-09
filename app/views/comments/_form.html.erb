@@ -9,14 +9,16 @@
       </ul>
     </div>
   <% end %>
-  
+  <% if author_signed_in? %>
+    <%= f.hidden_field :email, :value => current_author.email %>
+  <% else %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+  <% end %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body%>
+    <%= f.text_area :body, :id => "comment_txtArea" %>
   </div>
   <br />
   <div class="actions">
