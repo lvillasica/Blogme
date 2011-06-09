@@ -1,155 +1,338 @@
 body{
+
   font-family: Sans-serif;
+
   margin: 0;
+
   background-color: #1C1C1C;
+
   background-image:url('../images/mainpanelbg.jpeg');
+
   background-attachment:fixed;
+
 }
-#main{
+
+#header{
+  height: 2em;
+  margin: 0;
+  background-image: -moz-linear-gradient(top, #AF7817, #000);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AF7817), to(#000000));
+}
+
+#title{
   width: 981px;
+  height: 2em;
+  font-weight: bold;
+  position: relative;
   margin: auto;
+  top: 4px;
+  color: 	#FAF8CC;
+  font-family: sans-serif;
+  padding-left: 5px;
+}
+
+#main{
+
+  width: 981px;
+
+  margin: auto;
+
   border: 3px solid #000;
+
   border-top: none;
+
   padding: 5px;
+
   background-color: #fff;
+
   background-image:url('../images/contentbg2.jpeg');
+
   -moz-border-radius-bottomright: 20px;
+
   -moz-border-radius-bottomleft: 20px;
+
   opacity:0.9;
+
   filter:alpha(opacity=90);
-}
+
+border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;}
+
 h1{
+
   text-shadow: 1px 1px 0px #bad3ed;
+
   text-align: center;
+
   background-color: #707070;
+
   margin: auto;
+
   width: 30%;
+
   padding: 10px;
+
   border: 2px solid #000;
+
   -moz-border-radius: 20px;
+
   -webkit-border-radius: 20px;
+
   -khtml-border-radius: 20px;
+
   border-radius: 20px;
+
   -moz-box-shadow:inset 0px 0px 50px;
+
 }
+
 #main_lnks{
+
   color: #FFFFFF;
+
   margin: auto;
+
   padding: 10px;
+
   text-align: center;
+
   width: 161px;
+
   border: 3px solid #B8B8B8;
+
   border-top: none;
+
   -moz-border-radius-bottomright: 20px;
+
   -moz-border-radius-bottomleft: 20px;
-  -webkit-border-radius: 20px;
-  -khtml-border-radius: 20px;
-  border-radius: 20px;
+
+  border-bottom-right-radius: 20px;
+
   background-color: #000;
+
+  border-bottom-left-radius: 20px;
+
 }
+
 div#main_lnks a{
+
   text-decoration: none;
+
 }
+
 a:hover{
+
   background-color: grey;
+
   padding: 3px;
+
   border: 1px solid #fff;
+
   -moz-border-radius: 10px;
+
   -webkit-border-radius: 10px;
+
   -khtml-border-radius: 10px;
+
   border-radius: 10px;
+
   text-decoration: none;
+
   color: #fff;
+
 }
+
 #article_body{
+
   text-indent: 1.5em;
+
   text-align: justify;
+
   padding: 15px;
+
   background-color: #f0f0f2;
+
   -moz-border-radius: 20px;
+
   border: 1px solid;
+
 }
+
 p.comments{
+
   overflow:auto;
+
   text-align: justify;
+
   padding: 0px 15px 0px;
+
 }
+
 .field {
+
   padding-left: 30px;
+
   padding-top: 20px;
+
 }
+
 ul li{
+
   padding-bottom: 15px;
+
   list-style-type: none;
+
 }
+
 ul li.comment_list{
+
   -moz-border-radius: 10px;
+
   -moz-box-shadow:inset 0px 0px 20px;
+
   border: 1px solid black;
+
   padding: 10px;
+
   margin-bottom: 10px;
+
   list-style-type: none;
+
   background-color: #BDA674;
+
 }
+
 ul {
+
   margin-right: 40px;
+
 }
+
 img {
+
   border: 3px solid;
+
   -moz-border-radius: 5px;
+
 }
+
 #notice{
+
   color: red;
+
   font-style: italic;
+
 }
+
 ul li.lists:hover{
+
   -moz-border-radius: 10px;
+
   -moz-box-shadow:inset 0px 0px 20px;
+
   background-color: #BDA674;
+
   padding: 10px;
+
   margin-bottom: 10px;
+  border: 1px solid black;
 }
+
 #imagePanel, #authorInfo{
+
   float: left;
+
   padding: 0 20px 20px 20px;
+
 }
+
 #authorInfo{
+
   border: 2px solid #333;
+
   background-color: #f0f0f2;
+
   -moz-border-radius: 10px;
+
   width: 50%;
+
 }
+
 .clear{
+
   clear: both;
+
 }
+
 #wrapper{
+
   margin: 0 20px;
+
 }
+
 #imglnk:hover{
+
   background: none;
+
   padding: none;
+
   border: none;
+
   text-decoration: none;
+
   color: none;
+
 }
+
 .required{
+
   color: red;
+
   font-weight: bold;
+
 }
+
+
+input[type="text"], input[type="password"], input[type="email"], input[type="file"], textarea{
+  width: 300px;
+  border: 1px solid #55410A;
+  padding: 5px;
+}
+
 input[type="submit"]{
+
   background-color: #ED9C10;
+
   color: white;
-  padding: 3px;
+
+  padding: 5px;
+
   font-weight: bold;
+
   -moz-border-radius: 10px;
+
   -moz-box-shadow: 0 5px 5px #55410A;
+
+  -webkit-border-radius: 10px;
+  
+  -webkit-box-shadow: 0 5px 5px #55410A;
+  box-shadow: 0 5px 5px #55410A;
+
 }
+
 input[type="submit"]:hover{
+
   background-color: #FDC21E;
+  border: 1px solid black;
   color: black;
+  
 }
+
 input[type="submit"]:active{
+
   background-color: #ED9C10;
   color: white;
   -moz-box-shadow: 0 2px 2px #55410A;
+  -webkit-box-shadow: 0 2px 2px #55410A;
+  box-shadow: 0 2px 2px #55410A;
+
 }

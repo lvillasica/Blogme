@@ -8,6 +8,9 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="header">
+  <div id="title">The Wall</div>
+</div>
 <% page = request.path_parameters[:controller] %>
 <div id="main">
 <%= yield %>
